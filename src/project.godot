@@ -1,0 +1,73 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="Brickworld"
+run/main_scene="res://stages/lobby_room/lobby_room.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+BlockServer="*res://blocks/block_server/block_server.gd"
+NetworkServer="*res://network/network_server.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+
+[editor]
+
+launch_instances=2
+launch_arguments=PoolStringArray( "\"--position\"", "\"%d,%d\" % [index*650, 0]", "\"--resolution\"", "\"%dx%d\" % [640, 480]" )
+
+[editor_plugins]
+
+enabled=PoolStringArray( "launcher" )
+
+[input]
+
+move_forward={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_backward={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
+ ]
+}
+strafe_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
+ ]
+}
+strafe_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[physics]
+
+3d/physics_engine="GodotPhysics"
+3d/active_soft_world=false
+
+[rendering]
+
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+quality/shadow_atlas/size=8192
+quality/shadow_atlas/size.mobile=4096
+quality/spatial_partitioning/render_tree_balance=0.5
+quality/filters/msaa=2
+quality/filters/use_debanding=true
+environment/default_environment="res://default_env.tres"

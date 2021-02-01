@@ -1,0 +1,95 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://stages/lobby_room/lobby_room.gd" type="Script" id=1]
+[ext_resource path="res://stages/lobby_room/name_generator.gd" type="Script" id=2]
+
+[node name="LobbyRoom" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 1260.0
+margin_bottom = 24.0
+
+[node name="NameLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_top = 5.0
+margin_right = 38.0
+margin_bottom = 19.0
+text = "Name"
+
+[node name="NameLineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+margin_left = 42.0
+margin_right = 192.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 150, 0 )
+script = ExtResource( 2 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 28.0
+margin_right = 1260.0
+margin_bottom = 52.0
+
+[node name="AddressLabel" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_top = 5.0
+margin_right = 52.0
+margin_bottom = 19.0
+text = "Address"
+
+[node name="AddressLineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 56.0
+margin_right = 206.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 150, 0 )
+text = "127.0.0.1"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 56.0
+margin_right = 1260.0
+margin_bottom = 80.0
+
+[node name="PortLabel" type="Label" parent="VBoxContainer/HBoxContainer3"]
+margin_top = 5.0
+margin_right = 26.0
+margin_bottom = 19.0
+text = "Port"
+
+[node name="PortLineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 30.0
+margin_right = 88.0
+margin_bottom = 24.0
+text = "4001"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 84.0
+margin_right = 1260.0
+margin_bottom = 104.0
+custom_constants/separation = 10
+
+[node name="HostButton" type="Button" parent="VBoxContainer/HBoxContainer4"]
+margin_right = 84.0
+margin_bottom = 20.0
+text = "Host Game"
+
+[node name="JoinButton" type="Button" parent="VBoxContainer/HBoxContainer4"]
+margin_left = 94.0
+margin_right = 171.0
+margin_bottom = 20.0
+text = "Join Game"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer4/HostButton" to="." method="_on_host_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer4/JoinButton" to="." method="_on_join_button_pressed"]

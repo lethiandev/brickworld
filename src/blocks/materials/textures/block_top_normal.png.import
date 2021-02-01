@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/block_top_normal.png-57abbe48a02693fdc4b3d6b2da54daef.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://blocks/materials/textures/block_top_normal.png"
+dest_files=[ "res://.import/block_top_normal.png-57abbe48a02693fdc4b3d6b2da54daef.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=1
+flags/repeat=1
+flags/filter=false
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
