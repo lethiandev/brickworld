@@ -1,8 +1,8 @@
-# Brickworld Game
+# Brickworld Game, The
 
-Multiplayer first person shooter game featuring building traps, fences, fortresses etc. with placing bricks.
+**!Under development, not even an alpha version released yet!**
 
-Under development, not even an alpha version released yet.
+Brickworld is a game about competing with other players over internet, building fortresses and defeating enemy fractions. As the toy soldier you have ability to build structures out of the plastic. This game is still under development and the gameplay systems may change in the future.
 
 ![Game Screenshot](media/screenshot.png)
 
