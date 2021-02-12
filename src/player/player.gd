@@ -13,25 +13,6 @@ var motion_direction: Vector3 = Vector3()
 var motion_speed: float = 0.0
 var air_frames: int = 0
 
-func _ready() -> void:
-	$Node/BrickPreview.mesh = BlockServer.get_block_mesh(Vector3(2, 3, 4))
-
-func _process(p_delta: float) -> void:
-	var brick = $Node/BrickPreview as MeshInstance
-	var space = get_world().direct_space_state
-	var size = BlockServer.BLOCK_SIZE
-	
-	var basis = get_viewport().get_camera().global_transform.basis
-	var from = get_viewport().get_camera().global_transform.origin
-	var to = from - basis.z * 2.0
-	var result = space.intersect_ray(from, to, [self])
-	
-	if not result.empty():
-		#print(result.collider.name)
-		var half = (Vector3(2, 0, 4) * size) * 0.5
-		var pos = ((result.position - half + size * 0.5) / size).floor() * size
-		brick.global_transform.origin = pos
-
 func _physics_process(p_delta: float) -> void:
 	linear_velocity += GRAVITY * p_delta
 	

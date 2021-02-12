@@ -1,14 +1,17 @@
-extends Reference
+extends "./brick_generator.gd"
 tool
 
-var block_scale: Vector3 = Vector3(1.0, 1.0, 1.0)
+func _generate_brick_resource(p_size: Vector3) -> Resource:
+	var brick_base = SharedConstants.BRICK_BASE
+	var brick_scale = SharedConstants.BRICK_SCALE
+	return create_block_shape(p_size, brick_base, brick_scale)
 
-func create_block_shape(p_size: Vector3) -> Shape:
-	var shape = ConvexPolygonShape.new()
+func create_block_shape(p_size: Vector3, p_base: Vector3, p_scale: float) -> Shape:
+	var brick_units = p_size * p_base
+	var brick_size = brick_units * p_scale
 	
-	var block_size = p_size
-	var world_size = block_size * block_scale
-	shape.points = _generate_block_shape_vertices(world_size)
+	var shape = ConvexPolygonShape.new()
+	shape.points = _generate_block_shape_vertices(brick_size)
 	shape.margin = 0.01
 	
 	return shape

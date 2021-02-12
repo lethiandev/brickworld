@@ -8,16 +8,32 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "StaticBody",
+"class": "BrickBase",
+"language": "GDScript",
+"path": "res://bricks/brick_base/brick_base.gd"
+}, {
+"base": "Node",
+"class": "SharedConstants",
+"language": "GDScript",
+"path": "res://scripts/shared_constants.gd"
+} ]
+_global_script_class_icons={
+"BrickBase": "",
+"SharedConstants": ""
+}
+
 [application]
 
 config/name="Brickworld"
-run/main_scene="res://stages/lobby_room/lobby_room.tscn"
+run/main_scene="res://stages/bedroom_stage/bedroom_stage.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-BlockServer="*res://blocks/block_server/block_server.gd"
-NetworkServer="*res://network/network_server.gd"
+NetworkServer="*res://scripts/network_server/network_server.gd"
+BrickServer="*res://scripts/brick_server/brick_server.gd"
 
 [display]
 

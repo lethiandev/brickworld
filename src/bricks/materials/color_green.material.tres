@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=2]
+
+[ext_resource path="res://bricks/materials/block_basic.shader" type="Shader" id=1]
+[ext_resource path="res://bricks/materials/textures/block_bottom_normal.png" type="Texture" id=2]
+[ext_resource path="res://bricks/materials/textures/block_bottom_albedo.png" type="Texture" id=3]
+[ext_resource path="res://bricks/materials/textures/block_top_albedo.png" type="Texture" id=4]
+[ext_resource path="res://bricks/materials/textures/block_top_normal.png" type="Texture" id=5]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/color = Color( 0, 1, 0, 1 )
+shader_param/top_albedo = ExtResource( 4 )
+shader_param/top_normalmap = ExtResource( 5 )
+shader_param/bottom_albedo = ExtResource( 3 )
+shader_param/bottom_normalmap = ExtResource( 2 )

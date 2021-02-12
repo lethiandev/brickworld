@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/block_bottom_albedo.png-18e97f4521c79d60832097634d0a9635.stex"
+path="res://.import/block_bottom_normal.png-98c53586957efe161c8b69383ab47981.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://blocks/materials/textures/block_bottom_albedo.png"
-dest_files=[ "res://.import/block_bottom_albedo.png-18e97f4521c79d60832097634d0a9635.stex" ]
+source_file="res://bricks/materials/textures/block_bottom_normal.png"
+dest_files=[ "res://.import/block_bottom_normal.png-98c53586957efe161c8b69383ab47981.stex" ]
 
 [params]
 
@@ -18,12 +18,12 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
-compress/normal_map=0
+compress/normal_map=1
 flags/repeat=1
 flags/filter=false
 flags/mipmaps=true
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
